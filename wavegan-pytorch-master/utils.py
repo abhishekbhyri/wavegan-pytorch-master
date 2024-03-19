@@ -212,6 +212,7 @@ def weights_init(m):
 class WavDataLoader:
     def __init__(self, folder_path, audio_extension="mp3"):
         self.signal_paths = get_recursive_files(folder_path, audio_extension)
+        print(self.signal_paths)
         self.data_iter = None
         self.initialize_iterator()
 
